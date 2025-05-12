@@ -1,0 +1,198 @@
+
+
+<section class="bg-slate-900 text-white py-20">
+  <div class="container">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+      <p class="text-xl text-slate-300">
+        Have questions or ready to start your project? Get in touch with our team.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2">
+        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+        <div class="card p-6 shadow-lg">
+          <% if (submitted) { %>
+            <div class="text-center py-12">
+              <div class="inline-flex items-center justify-center p-3 bg-emerald-100 rounded-full mb-4">
+                <!-- Send icon SVG -->
+                <svg class="h-8 w-8 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Message Sent!</h3>
+              <p class="text-muted-foreground mb-6">
+                Thank you for reaching out. We'll get back to you within 24 hours.
+              </p>
+              <a href="/contact" class="btn bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded">Send Another Message</a>
+            </div>
+          <% } else { %>
+            <form action="/contact" method="POST" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label for="name" class="block font-medium">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required class="input" />
+                </div>
+                <div class="space-y-2">
+                  <label for="email" class="block font-medium">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required class="input" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label for="company" class="block font-medium">Company Name</label>
+                  <input type="text" id="company" name="company" placeholder="Your Company" class="input" />
+                </div>
+                <div class="space-y-2">
+                  <label for="service" class="block font-medium">Service Interested In</label>
+                  <select id="service" name="service" class="input">
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="linux-support">Linux Support</option>
+                    <option value="software-development">Software Development</option>
+                    <option value="saas-solutions">SaaS Solutions</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label for="message" class="block font-medium">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..." rows="6" required class="input"></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded">Send Message</button>
+            </form>
+          <% } %>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold mb-6">Contact Information</h2>
+        <div class="space-y-6">
+          <div class="card p-6 shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="bg-emerald-100 p-3 rounded-full">
+                <!-- Mail icon SVG -->
+                <svg class="h-6 w-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Email Us</h3>
+                <p class="text-muted-foreground mb-1">For general inquiries:</p>
+                <a href="mailto:info@techiespirals.com" class="text-emerald-600 hover:underline">info@techiespirals.com</a>
+                <p class="text-muted-foreground mt-2 mb-1">For support:</p>
+                <a href="mailto:support@techiespirals.com" class="text-emerald-600 hover:underline">support@techiespirals.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6 shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="bg-emerald-100 p-3 rounded-full">
+                <!-- Phone icon SVG -->
+                <svg class="h-6 w-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 10l7 7 7-7"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Call Us</h3>
+                <p class="text-muted-foreground mb-1">Main Office:</p>
+                <a href="tel:+15551234567" class="text-emerald-600 hover:underline">+1 (555) 123-4567</a>
+                <p class="text-muted-foreground mt-2 mb-1">Support Hotline:</p>
+                <a href="tel:+15557654321" class="text-emerald-600 hover:underline">+1 (555) 765-4321</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6 shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="bg-emerald-100 p-3 rounded-full">
+                <!-- MapPin icon SVG -->
+                <svg class="h-6 w-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Visit Us</h3>
+                <p class="text-muted-foreground mb-2">Headquarters:</p>
+                <address class="not-italic text-muted-foreground">
+                  123 Tech Boulevard<br />
+                  Suite 456<br />
+                  San Francisco, CA 94105<br />
+                  United States
+                </address>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="font-semibold text-lg mb-4">Business Hours</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li class="flex justify-between">
+                <span>Monday - Friday:</span>
+                <span>9:00 AM - 6:00 PM PST</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Saturday:</span>
+                <span>10:00 AM - 2:00 PM PST</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Sunday:</span>
+                <span>Closed</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-12 bg-slate-50">
+  <div class="container">
+    <div class="aspect-video w-full rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-slate-200">
+      <p class="text-muted-foreground">Interactive Map Would Be Displayed Here</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="container">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+        Find quick answers to common questions about our services.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="card p-6 shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">What Linux distributions do you support?</h3>
+        <p class="text-muted-foreground">
+          We support all major enterprise Linux distributions including RHEL, Ubuntu, Debian, SUSE, and CentOS, as well as specialized distributions for specific use cases.
+        </p>
+      </div>
+
+      <div class="card p-6 shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">Do you offer 24/7 support?</h3>
+        <p class="text-muted-foreground">
+          Yes, we offer 24/7 support options for our enterprise clients with critical infrastructure needs. Different support tiers are available based on your requirements.
+        </p>
+      </div>
+
+      <div class="card p-6 shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">What is your typical project timeline?</h3>
+        <p class="text-muted-foreground">
+          Project timelines vary based on scope and complexity. Small projects may take 2-4 weeks, while larger enterprise solutions can take 3-6 months or more.
+        </p>
+      </div>
+
+      <div class="card p-6 shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">Do you offer training for our team?</h3>
+        <p class="text-muted-foreground">
+          Yes, we provide comprehensive training for your team on any solutions we implement, ensuring your staff can effectively manage and utilize the systems.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
