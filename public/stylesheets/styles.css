@@ -1,0 +1,61 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Emerald color variables */
+:root {
+  --emerald-50: #ecfdf5;
+  --emerald-100: #d1fae5;
+  --emerald-200: #a7f3d0;
+  --emerald-300: #6ee7b7;
+  --emerald-400: #34d399;
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+  --emerald-800: #065f46;
+  --emerald-900: #064e3b;
+  --emerald-950: #022c22;
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--emerald-500);
+  outline-offset: 2px;
+}
+
+/* Custom transitions */
+a,
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Image placeholders */
+img[src*="placeholder.jpg"] {
+  background-color: #f3f4f6;
+  object-fit: cover;
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom form styles */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--emerald-500);
+  box-shadow: 0 0 0 1px var(--emerald-500);
+}
+
+/* Custom button hover effect */
+.bg-emerald-600:hover {
+  transform: translateY(-1px);
+}
