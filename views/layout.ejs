@@ -8,24 +8,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="stylesheets/tailwindcss/index.css"/>
-  <link rel="stylesheet" href="stylesheets/tailwindcss/preflight.css"/>
-  <link rel="stylesheet" href="stylesheets/tailwindcss/theme.css"/>
-  <link rel="stylesheet" href="stylesheets/tailwindcss/utilities.css"/>
-  <link rel="stylesheet" href="stylesheets/styles.css"/>
-  <!-- <link rel="stylesheet" href="stylesheets/darklybootstrap.css"/> -->
+  <link rel="stylesheet" href="/stylesheets/tailwindcss/index.css"/>
+  <link rel="stylesheet" href="/stylesheets/tailwindcss/preflight.css"/>
+  <link rel="stylesheet" href="/stylesheets/tailwindcss/theme.css"/>
+  <link rel="stylesheet" href="/stylesheets/tailwindcss/utilities.css"/>
+  <link rel="stylesheet" href="/stylesheets/styles.css"/>
+  <link rel="icon" type="image/jpg" href="/images/me.jpg" />
+  
+  <link rel="stylesheet" href="/stylesheets/quartzbootstrap.css"/>
+  
   <script src="/stylesheets/tailwindcss/dist/colors.js"></script>
-  <script src="stylesheets/tailwindcss/dist/default-theme.js"></script>
-  <script src="stylesheets/tailwindcss/dist/flatten-color-palette.js"></script>
-  <script src="stylesheets/tailwindcss/dist/lib.js"></script>
-  <script src="stylesheets/tailwindcss/dist/plugin.js"></script>
-  <script src="javascripts/main.js"></script>
+  <script src="/stylesheets/tailwindcss/dist/default-theme.js"></script>
+  <script src="/stylesheets/tailwindcss/dist/flatten-color-palette.js"></script>
+  <script src="/stylesheets/tailwindcss/dist/lib.js"></script>
+  <script src="/stylesheets/tailwindcss/dist/plugin.js"></script>
+  <script src="/javascripts/main.js"></script>
 
-  <link href="stylesheets/globals.css" rel="stylesheet" />
+  <link href="/stylesheets/globals.css" rel="stylesheet" />
 </head>
 <body style="font-family: 'Inter', sans-serif;">
   
-  <%- include('partials/header') %>
+  <%- include('partials/header', {title: "TECHIESpirals Digital",  currentYear: "2025", metaDescription: "defined"}) %>
   <main>
     <%- body %>
   </main>

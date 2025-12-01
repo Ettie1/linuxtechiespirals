@@ -5,8 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const ejslayouts = require('express-ejs-layouts');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// var indexRouter = require('./routes/index');
+// var usersRouter = require('./routes/users');
 var tsRouter = require('./routes/tsRoute')
 
 var app = express();
@@ -20,14 +20,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('images', express.static(__dirname + 'public/images'));
-app.use('javascripts', express.static(__dirname + 'public/javascripts'));
-app.use('stylesheets', express.static(__dirname + 'public/stylesheets'));
 app.use(ejslayouts);
+app.use('/images', express.static(__dirname + 'public/images'));
+// app.use('/placeholder', express.static(__dirname + 'public/images/')); //May be duplicate of above
+app.use('/javascripts', express.static(__dirname + 'public/javascripts'));
+app.use('/stylesheets', express.static(__dirname + 'public/stylesheets'));
+app.use('/css', express.static(__dirname + 'public/stylesheets'));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/ts', tsRouter);
+
+// app.use('/', indexRouter);
+//app.use('/users', usersRouter);
+app.use('/', tsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
